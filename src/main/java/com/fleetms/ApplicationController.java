@@ -30,10 +30,10 @@ public class ApplicationController {
         return "/accounts/index";
     }
 
-    @GetMapping("/vehicle")
+    @GetMapping("/vehicles")
     public String vehicle()
     {
-        return "/vehicle/index";
+        return "/vehicles/index";
     }
 
     @GetMapping("/payroll")

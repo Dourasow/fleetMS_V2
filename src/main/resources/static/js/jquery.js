@@ -27,7 +27,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
             })
 
         })
-
+//-----------------------------------------------------------------------------------------------------
 
  $('document').ready(function  () {
                   $('.table #display').on('click', function (event) {
@@ -40,4 +40,102 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
                    })
                  })
                })
+//-----------------------------------------------------------------------------------------------
+ $('document').ready(function () {
+            $('.table #display').on('click', function (event) {
+                event.preventDefault();
+                var href = $(this).attr('href');
+                $.get(href, function (vehicleMake, status) {
+                    $('#txtId').val(vehicleMakes.id);
+                    $('#txtDescription').val(vehicleMake.description);
+                    $('#txtDetails').val(vehicleMake.details);
+                })
+            })
+        })
 
+//-----------------------------------------------------------------------------------------------
+ $('document').ready(function () {
+            $('.table #display').on('click', function (event) {
+                event.preventDefault();
+                var href = $(this).attr('href');
+                $.get(href, function (vehicleModel, status) {
+                    $('#txtId').val(vehicleModel.id);
+                    $('#txtDescription').val(vehicleModel.description);
+                    $('#txtDetails').val(vehicleModel.details);
+                })
+            })
+        })
+
+ //------------------------------------------------------------------------------------------------
+  $('document').ready(function () {
+             $('.table #display').on('click', function (event) {
+                 event.preventDefault();
+                 var href = $(this).attr('href');
+                 console.log(href)
+                 $.get(href, function (vehicleStatus, status) {
+                     $('#txtId').val(vehicleStatus.id);
+                     $('#txtDescription').val(vehicleStatus.description);
+                     $('#txtDetails').val(vehicleStatus.details);
+                 })
+             })
+         })
+
+ //------------------------------------------------------------------------------------------------
+   $('document').ready(function () {
+             $('.table #photoButton').on('click', function (event) {
+                 event.preventDefault();
+                 var href = $(this).attr('href');
+                 $('#photoModal #vehiclePhoto').attr('src', href);
+                 $('#photoModal').modal();
+             })
+         })
+
+   //---------------------------------------------------------------------------------------------------
+          $('document').ready(function () {
+               $('.table #display').on('click', function (event) {
+                   event.preventDefault();
+                   var href = $(this).attr('href');
+                   $.get(href, function (employeeStatus, status) {
+                       $('#txtId').val(employeeStatus.id);
+                       $('#txtDescription').val(employeeStatus.description);
+                       $('#txtDetails').val(employeeStatus.details);
+                   })
+               })
+
+           })
+
+  //--------------------------------------------------------------------------------------------------
+   $('document').ready(function () {
+              $('.table #display').on('click', function (event) {
+                  event.preventDefault();
+                  var href = $(this).attr('href');
+                  $.get(href, function (employeeType, status) {
+                      $('#txtId').val(employeeType.id);
+                      $('#txtDescription').val(employeeType.description);
+                      $('#txtDetails').val(employeeType.details);
+                  })
+              })
+          })
+
+   //-----------------------------------------------------------------------------------------------------
+           $('document').ready(function () {
+               $('.table #photoButton').on('click', function (event) {
+                   event.preventDefault();
+                   var href = $(this).attr('href');
+                   $('#photoModal #employeePhoto').attr('src', href);
+                   $('#photoModal').modal();
+               });
+           })
+
+    //--------------------------------------------------------------------------------------------------
+       $('document').ready(function () {
+                $('.table #display').on('click', function (event) {
+                    event.preventDefault();
+                    var href = $(this).attr('href');
+                    $.get(href, function (jobTitle, status) {
+                        $('#txtId').val(jobTitle.id);
+                        $('#txtDescription').val(jobTitle.description);
+                        $('#txtDetails').val(jobTitle.details);
+                    })
+                })
+            })

@@ -1,0 +1,22 @@
+package com.fleetms.hr.model;
+
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fleetms.settings.model.CommonObject;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+import javax.persistence.Entity;
+
+@Entity
+@Data
+@EqualsAndHashCode(callSuper=false)
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+public class EmployeeStatus extends CommonObject {
+
+}
+/*
+© 2022 GitHub, Inc.
+        Terms
+        Privacy*/
+
