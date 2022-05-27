@@ -139,3 +139,55 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
                     })
                 })
             })
+
+    //-----------------------------------------------------------------------------------------------------
+       $('document').ready(function () {
+                $('.table #display').on('click', function (event) {
+                    event.preventDefault();
+                    var href = $(this).attr('href');
+                    $.get(href, function (transactionType, status) {
+                        $('#txtId').val(transactionType.id);
+                        $('#txtDescription').val(transactionType.description);
+                        $('#txtDetails').val(transactionType.details);
+                    })
+                })
+            })
+
+      //--------------------------------------------------------------------------------------------------
+          $('document').ready(function () {
+                  $('.table #display').on('click', function (event) {
+                      event.preventDefault();
+                      var href = $(this).attr('href');
+                      $.get(href, function (transactionStatus, status) {
+                          $('#txtId').val(transactionStatus.id);
+                          $('#txtDescription').val(transactionStatus.description);
+                          $('#txtDetails').val(transactionStatus.details);
+                      })
+                  })
+              })
+
+      //----------------------------------------------------------------------------------------------------
+           $('document').ready(function () {
+                  $('.table #display').on('click', function (event) {
+                      event.preventDefault();
+                      var href = $(this).attr('href');
+                      $.get(href, function (invoiceStatus, status) {
+                          $('#txtId').val(invoiceStatus.id);
+                          $('#txtDescription').val(invoiceStatus.description);
+                          $('#txtDetails').val(invoiceStatus.details);
+                      })
+                  })
+              })
+
+      //--------------------------------------------------------------------------------------------------
+         $('document').ready(function () {
+                    $('.table #display').on('click', function (event) {
+                        event.preventDefault();
+                        var href = $(this).attr('href');
+                        $.get(href, function (role, status) {
+                            $('#txtId').val(role.id);
+                            $('#txtDescription').val(role.description);
+                            $('#txtDetails').val(role.details);
+                        })
+                    })
+                })
