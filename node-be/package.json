@@ -4,7 +4,8 @@
   "description": "Node Backend for FleetMS v2",
   "main": "index.js",
   "engines": {
-    "node": "12.11.1"
+    "node": "16.14.0",
+    "npm": "8.3.1"
   },
     "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
