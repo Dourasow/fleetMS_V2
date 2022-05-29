@@ -10,7 +10,7 @@ app.listen(3000, () => {
 app.get('/countries', (req, res) => {
     console.log('A user just requested list of countries');
 
-    client.query(`Select * from fleetms.Country`, (err, result) => {
+    client.query(`Select * from fleetdb.Country`, (err, result) => {
         if (err) {
             console.log(err.message);
         } else {
